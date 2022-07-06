@@ -1,0 +1,123 @@
+{
+    "0": {
+        "num": 0,
+        "name": "Burnout Paradise",
+        "publisher": "EA",
+        "count": 12,
+        "year": 2012,
+        "platform": "PS, XBox, PC",
+        "internet": "Not required",
+        "genre": "racing",
+        "popular": true
+    },
+    "1": {
+        "num": 1,
+        "name": "Portal 2",
+        "publisher": "Valve",
+        "count": 8,
+        "year": 2010,
+        "platform": "PS, XBox, PC",
+        "internet": "Required",
+        "genre": "platformer",
+        "popular": false
+    },
+    "2": {
+        "num": 2,
+        "name": "Gears of War",
+        "publisher": "Microsoft",
+        "count": 10,
+        "year": 2008,
+        "platform": "XBox, PC",
+        "internet": "Not required",
+        "genre": "shooter",
+        "popular": true
+    },
+    "3": {
+        "num": 3,
+        "name": "Fable 2",
+        "publisher": "Microsoft",
+        "count": 10,
+        "year": 2008,
+        "platform": "XBox",
+        "internet": "Not required",
+        "genre": "Action/Adventure",
+        "popular": false
+    },
+    "4": {
+        "num": 4,
+        "name": "Uncharted 2",
+        "publisher": "Sony CE",
+        "count": 20,
+        "year": 2009,
+        "platform": "PS",
+        "internet": "Not required",
+        "genre": "Action/Adventure",
+        "popular": true
+    },
+    "5": {
+        "num": 5,
+        "name": "Half-life 2",
+        "publisher": "Valve",
+        "count": 10,
+        "year": 2004,
+        "platform": "PS, XBox, PC",
+        "internet": "Required",
+        "genre": "shooter",
+        "popular": true
+    },
+    "6": {
+        "num": 6,
+        "name": "Battlefield 2042",
+        "publisher": "EA",
+        "count": 50,
+        "year": 2021,
+        "platform": "PS, XBox, PC",
+        "internet": "Required",
+        "genre": "shooter",
+        "popular": false
+    },
+    "7": {
+        "num": 7,
+        "name": "The Last of Us",
+        "publisher": "Sony CE",
+        "count": 8,
+        "year": 2013,
+        "platform": "PS",
+        "internet": "Not required",
+        "genre": "Action/Adventure",
+        "popular": true
+    },
+    "8": {
+        "num": 8,
+        "name": "Forza Horizon 4",
+        "publisher": "Microsoft",
+        "count": 15,
+        "year": 2018,
+        "platform": "XBox, PC",
+        "internet": "Not required",
+        "genre": "racing",
+        "popular": false
+    },
+    "9": {
+        "num": 9,
+        "name": "Ori and the Blind Forest",
+        "publisher": "Microsoft",
+        "count": 20,
+        "year": 2015,
+        "platform": "XBox, PC",
+        "internet": "Not required",
+        "genre": "Action/Adventure",
+        "popular": false
+    },
+    "10": {
+        "num": 10,
+        "name": "Mass Effect Legendary Edition",
+        "publisher": "EA",
+        "count": 30,
+        "year": 2021,
+        "platform": "PS, XBox, PC",
+        "internet": "Not required",
+        "genre": "Action/Adventure",
+        "popular": true
+    }
+}
