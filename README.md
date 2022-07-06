@@ -1,0 +1,1 @@
+Online Store is a project for RS School that was written in TypeScript.
