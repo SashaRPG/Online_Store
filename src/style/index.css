@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 0 2rem 0;
     margin: 0;
     max-height: 150px;
     grid-area: 1 / 1 / 4 / 4; 
@@ -28,14 +28,9 @@ body {
 }
 
 .container {
-/*     display: grid;
-    grid-template-areas: 'header header header' 
-                         'aside main main'
-                         'footer footer footer';
-    grid-template: 1fr / 200px 1fr 1fr; */
     display: grid; 
     grid-template-columns: 300px repeat(2, 1fr); 
-    grid-template-rows: 150px 1fr 150px; 
+    grid-template-rows: 130px 1fr 75px; 
     grid-column-gap: 0px;
     grid-row-gap: 0px; 
     margin: 0;
@@ -48,8 +43,76 @@ body {
     padding: 1rem;
 }
 
+.filters__all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-around;
+}
+
+.filters__search {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 85%;
+    height: auto;
+    cursor: pointer;
+}
+
+.filters__search:not(.filters__search:focus) {
+    background: url('../assets/premium-icon-search-2414255.png');
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.filters__sort {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.filters__platform, .filters__publisher, .filters__genres, .filters_internet, .filters_popular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    margin: 0.5rem;
+  
+    display: flex;
+    flex-direction: column;
+}
+
 .list, .filters__sort, .filters__search {
     padding: 0.5rem 0;
+}
+
+.button {
+    height: 50px;
+    width: 90px;
+    padding: 0.3rem;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.list .button .type-ps {
+    background-image: url('../assets/ps_playstation_logo.png');
+    margin: 10px;
+}
+
+.list .button .type-xbx {
+    background-image: url('../assets/xbox_360.png');
+    margin: 10px;
+}
+
+.list .button .type-pc {
+    background-image: url('../assets/mycomputer.png');
+    margin: 10px;
 }
 
 .games {
@@ -66,7 +129,7 @@ body {
 .catalogue__item {
     border-radius: 10%;
     margin: 10px;
-    height: 350px;
+    height: 400px;
     width: 300px;
     gap: 20px;
     background-color: #fff;
@@ -74,6 +137,14 @@ body {
 
 .catalogue__data-title {
     text-align: center;
+}
+
+.catalogue__data-cover {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: auto;
 }
 
 .catalogue__data-details {
