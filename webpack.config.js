@@ -18,6 +18,14 @@ const baseConfig = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.(png|jpeg|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
+            },
         ],
     },
     resolve: {
@@ -26,6 +34,7 @@ const baseConfig = {
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, './dist'),
+        assetModuleFilename: "assets/[name][ext]",
     },
     plugins: [
         new HtmlWebpackPlugin({
