@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Game Store</title>
-    <!-- <link rel="stylesheer" href="./style/main.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -13,7 +15,9 @@
         <div class="container">
           <header class="header">
             <h1 class="title">Welcome to our store!</h1>
-            <div class="cart"><p>ADD CART HERE</p></div>
+            <div class="cart">
+              <span class="counter">0</span>
+            </div>
           </header>
             <div class="filters">
               <div class="search">
@@ -23,8 +27,8 @@
               <div>
                 <h3 class="filters__title">Sort by:</h3>
                 <select class="filters__sort">
-                  <option class="filters__sort-options" value="a-z">By Name form "A to Z"</option>
-                  <option class="filters__sort-options" value="z-a">By Name form "Z to A"</option>
+                  <option class="filters__sort-options" value="a-z">By Name from "A to Z"</option>
+                  <option class="filters__sort-options" value="z-a">By Name from "Z to A"</option>
                   <option class="filters__sort-options" value="oldest-first">Oldest first</option>
                   <option class="filters__sort-options" value="newest-first">Newest first</option>
                 </select>
@@ -34,8 +38,8 @@
                 <div class="filters__platform">
                   Your gaming platform:
                   <ul class="list">
-                    <button class="button type-ps"><p>PlayStation</p></button>
-                    <button class="button type-xbx"><p>XBox</p></button>
+                    <button class="button type-ps"></button>
+                    <button class="button type-xbx"></button>
                     <button class="button type-pc"><p>PC</p></button>
                   </ul>
                 </div>
@@ -49,40 +53,41 @@
                   </ul>
                 </div>
                 <div class="filters__genres">
-                  Genres:
+                  Game Genres:
                   <ul class="list">
                     <button class="button type-shooter">Shooters</button>
                     <button class="button type-racing">Racing</button>
                     <button class="button type-platformer">Platformer</button>
-                    <button class="button type-action">Action/Adventure</button>
+                    <button class="button type-action">Action</button>
                   </ul>
                 </div>
-                <div class="filters_internet">
-                  Internet not required:
+                <div class="filters_popular">
+                  <p>Internet not required:</p>
                   <div class="list">
                     <input type="checkbox" class="internet-input" id="int_check">
                     <label for="int_check" class="internet-input-label"></label>
                   </div>
                 </div>
                 <div class="filters_popular">
-                  Hits:
+                  <p>Hits:</p>
                   <div class="list">
                     <input type="checkbox" class="popular-input" id="pplr_check">
                     <label for="pplr_check" class="popular-input-label"></label>
                   </div>
                 </div>
               </div>
-              <h3 class="filters__title">Filter by Range</h3>
               <div>
+                <h3 class="filters__title">Filter by Range</h3>
                 <!-- ADD RANGE FILTER -->
               </div>
-              <button class="button reset">Reset filters</button>
+              <h3 class="filters__title">Reset filters and cart:</h3>
+              <button class="button reset"></button>
             </div>
             <div class="games">
               <div class="catalogue__item">
                 <div class="catalogue__data">
                   <div class="catalogue__data-cover">
-                    <img src="./assets/covers/44.jpeg">
+                    <img src="./assets/44.jpeg">
                   </div>
                   <h2 class="catalogue__data-title">Crysis</h2>
                   <ul class="catalogue__data-details">
@@ -99,7 +104,7 @@
               <div class="catalogue__item">
                 <div class="catalogue__data">
                   <div class="catalogue__data-cover">
-                    <img src="./assets/covers/44.jpeg">
+                    <img src="./assets/44.jpeg">
                   </div>
                   <h2 class="catalogue__data-title">Crysis</h2>
                   <ul class="catalogue__data-details">
@@ -116,7 +121,7 @@
               <div class="catalogue__item">
                 <div class="catalogue__data">
                   <div class="catalogue__data-cover">
-                    <img src="./assets/covers/44.jpeg">
+                    <img src="./assets/44.jpeg">
                   </div>
                   <h2 class="catalogue__data-title">Crysis</h2>
                   <ul class="catalogue__data-details">
@@ -133,7 +138,7 @@
               <div class="catalogue__item">
                 <div class="catalogue__data">
                   <div class="catalogue__data-cover">
-                    <img src="./assets/covers/44.jpeg">
+                    <img src="./assets/44.jpeg">
                   </div>
                   <h2 class="catalogue__data-title">Crysis</h2>
                   <ul class="catalogue__data-details">
@@ -152,13 +157,13 @@
           <footer class="footer">
             <p class="logo">
               <a href="https://rs.school/js/" target="_blank">
-                <img src="./assets/rs_school_js.svg">
+                <img class="footer__img" src="./assets/rs_school.png" alt="rs_school logo">
               </a>
             </p>
             <p class="year">2022</p>
             <p class="author">
               <a href="https://github.com/sashaRPG" target="_blank">
-                <img src="./assets/GitHub-Mark-120px-plus.png">
+                <img class="footer__img" src="./assets/GitHub-Mark-120px-plus.png" alt="github logo">
               </a>
             </p>
           </footer>

@@ -5,10 +5,13 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 .title {
-    color: red;
+    color: rgb(0, 0, 0);
+    text-align: center;
     grid-area: 1 / 1 / 2 / 3;
 }
 
@@ -16,15 +19,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 0;
+    padding: 0 2rem 1rem;
     margin: 0;
-    max-height: 150px;
+    max-height: 130px;
     grid-area: 1 / 1 / 4 / 4; 
-    background-color: rgb(126, 126, 126);
+    background-color: rgb(226, 238, 136, 0.7);
 }
 
 .cart {
     grid-area: 1 / 3 / 2 / 4;
+    height: 80%;
+    width: 4rem;
+    background-image: url('../assets/shopping-cart.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -38,7 +49,7 @@ body {
 
 .filters {
     grid-area: 2 / 1 / 3 / 2;
-    background-color: rgb(145, 102, 102);
+    background-color: rgb(226, 238, 136, 0.7);
     margin: 0;
     padding: 1rem;
 }
@@ -47,15 +58,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    align-content: space-around;
+    /* align-content: space-around; */
 }
 
 .filters__search {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    width: 85%;
+    width: 90%;
     height: auto;
     cursor: pointer;
+}
+
+.filters__search::placeholder {
+    color: #676767;
 }
 
 .filters__search:not(.filters__search:focus) {
@@ -66,14 +81,14 @@ body {
 }
 
 .filters__sort {
-    width: 85%;
+    width: 90%;
     height: auto;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
 }
 
-.filters__platform, .filters__publisher, .filters__genres, .filters_internet, .filters_popular {
+.filters__platform, .filters__publisher, .filters__genres, .filters_popular {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,42 +96,116 @@ body {
 
 .list {
     margin: 0.5rem;
-  
     display: flex;
     flex-direction: column;
 }
 
-.list, .filters__sort, .filters__search {
+/* .list, .filters__sort, .filters__search {
     padding: 0.5rem 0;
-}
+} */
 
 .button {
     height: 50px;
     width: 90px;
     padding: 0.3rem;
-    margin: auto;
+    margin: 10px;
     border-radius: 10px;
     border: 1px solid black;
     cursor: pointer;
+    background-color: #fff;
 }
 
-.list .button .type-ps {
+.button:hover {
+    background-color: rgb(80, 163, 222, 0.7);
+}
+
+.button.active {
+    filter:invert(20%) saturate(561%) hue-rotate(342deg) brightness(83%) contrast(200%);
+}
+
+.type-ps {
     background-image: url('../assets/ps_playstation_logo.png');
-    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.list .button .type-xbx {
+.type-xbx {
     background-image: url('../assets/xbox_360.png');
-    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.list .button .type-pc {
+.type-pc {
     background-image: url('../assets/mycomputer.png');
-    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.internet-input, .popular-input {
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+.internet-input:checked + .internet-input-label, .popular-input:checked + .popular-input-label {
+    background-color: #003cff;
+    border-color:#003cff;
+}
+
+.internet-input:checked + .internet-input-label:after, .popular-input:checked + .popular-input-label:after {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    content: "";
+    display: block;
+    height: 10px;
+    left: 12px;
+    position: absolute;
+    top: 8px;
+    transform: rotate(45deg);
+    width: 6px;
+}
+
+.internet-input-label, .popular-input-label {
+    backdrop-filter: blur(3px);
+    background-color: rgba(254, 254, 254, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 20px;
+    padding: 0;
+    position: relative;
+}
+
+.internet-input-label:hover, .popular-input-label:hover {
+    background-color:rgb(80, 163, 222, 0.7);
+}
+
+.popular-input-label {
+    position: relative;
+    left: 135px;
+}
+
+.reset {
+    background-image: url('../assets/reset.png');
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+
+.reset:hover {
+    opacity: 0.7;
 }
 
 .games {
-    background-color: rgb(176, 200, 122);
+    background-color: rgb(255, 255, 255);
+    background-image: url('../assets/back.jpg');
     grid-area: 2 / 2 / 3 / 4;
     margin: 0;
     display: flex;
@@ -124,6 +213,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid rgb(121, 121, 121, 0.6);
 }
 
 .catalogue__item {
@@ -131,8 +221,8 @@ body {
     margin: 10px;
     height: 400px;
     width: 300px;
-    gap: 20px;
-    background-color: #fff;
+    gap: 15px;
+    background-color: rgb(80, 163, 222);
 }
 
 .catalogue__data-title {
@@ -157,7 +247,7 @@ body {
 
 .catalogue__data-details li {
     display: inline-block;
-    padding: 0.3rem;
+    padding: 0.1rem;
 }
 
 .footer {
@@ -167,6 +257,56 @@ body {
     align-items: center;
     margin: 0;
     padding: 2rem;
-    max-height: 150px;
-    background-color: rgb(139, 29, 29);
+    height: 5rem;
+    background-color: rgb(80, 163, 222, 0.7);
+}
+
+.footer__img {
+    height: 50px;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+    .container {
+        grid-template-columns: 240px repeat(2, 1fr); 
+        grid-template-rows: 100px 1fr 75px; 
+    }
+
+    .header {
+        max-height: 100px;
+    }
+
+    .cart {
+        width: 3rem;
+        height: 70%;
+    }
+
+    .filters__sort {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        width: 75px;
+        height: 40px;
+    }
+
+    .reset {
+        width: 40px;
+        height: 40px;
+    }
+
+    .catalogue__item {
+        height: 330px;
+        width: 250px;
+        gap: 10px;
+    }
+
+    .popular-input-label {
+        left: 95px;
+    }
+
 }

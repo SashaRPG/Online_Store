@@ -19,12 +19,8 @@ const baseConfig = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.(png|jpeg|gif)$/i,
-                use: [
-                  {
-                    loader: 'file-loader',
-                  },
-                ],
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             },
         ],
     },
