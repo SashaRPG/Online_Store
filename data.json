@@ -1,6 +1,7 @@
 {
     "0": {
         "num": 0,
+        "cover": "src/assets/covers/burnout.jpeg",
         "name": "Burnout Paradise",
         "publisher": "EA",
         "count": 12,
@@ -12,6 +13,7 @@
     },
     "1": {
         "num": 1,
+        "cover": "src/assets/covers/portal_2.jpeg",
         "name": "Portal 2",
         "publisher": "Valve",
         "count": 8,
@@ -23,6 +25,7 @@
     },
     "2": {
         "num": 2,
+        "cover": "src/assets/covers/gears_of_war.jpeg",
         "name": "Gears of War",
         "publisher": "Microsoft",
         "count": 10,
@@ -34,6 +37,7 @@
     },
     "3": {
         "num": 3,
+        "cover": "src/assets/covers/fable_2.jpeg",
         "name": "Fable 2",
         "publisher": "Microsoft",
         "count": 10,
@@ -45,6 +49,7 @@
     },
     "4": {
         "num": 4,
+        "cover": "src/assets/covers/uncharted_2.jpeg",
         "name": "Uncharted 2",
         "publisher": "Sony CE",
         "count": 20,
@@ -56,6 +61,7 @@
     },
     "5": {
         "num": 5,
+        "cover": "src/assets/covers/HL_2.jpeg",
         "name": "Half-life 2",
         "publisher": "Valve",
         "count": 10,
@@ -67,6 +73,7 @@
     },
     "6": {
         "num": 6,
+        "cover": "src/assets/covers/battlefield_2042.jpeg",
         "name": "Battlefield 2042",
         "publisher": "EA",
         "count": 50,
@@ -78,6 +85,7 @@
     },
     "7": {
         "num": 7,
+        "cover": "src/assets/covers/the_last_of_us.jpeg",
         "name": "The Last of Us",
         "publisher": "Sony CE",
         "count": 8,
@@ -89,6 +97,7 @@
     },
     "8": {
         "num": 8,
+        "cover": "src/assets/covers/forzaH4.jpeg",
         "name": "Forza Horizon 4",
         "publisher": "Microsoft",
         "count": 15,
@@ -100,6 +109,7 @@
     },
     "9": {
         "num": 9,
+        "cover": "src/assets/covers/ori.jpeg",
         "name": "Ori and the Blind Forest",
         "publisher": "Microsoft",
         "count": 20,
@@ -111,6 +121,7 @@
     },
     "10": {
         "num": 10,
+        "cover": "src/assets/covers/ME_LE.jpeg",
         "name": "Mass Effect Legendary Edition",
         "publisher": "EA",
         "count": 30,
@@ -122,6 +133,7 @@
     },
     "11": {
         "num": 11,
+        "cover": "src/assets/covers/crysis.jpeg",
         "name": "Crysis",
         "publisher": "EA",
         "count": 13,
