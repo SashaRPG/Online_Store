@@ -1,146 +1,146 @@
-{
-    "0": {
+[
+    {
         "num": 0,
-        "cover": "src/assets/covers/burnout.jpeg",
+        "cover": "./assets/covers/burnout.jpeg",
         "name": "Burnout Paradise",
         "publisher": "EA",
         "count": 12,
         "year": 2012,
         "platform": "PS, XBox, PC",
         "internet": "Not required",
-        "genre": "racing",
+        "genre": "Racing",
         "popular": true
-    },
-    "1": {
+        },
+{
         "num": 1,
-        "cover": "src/assets/covers/portal_2.jpeg",
+        "cover": "./assets/covers/portal_2.jpeg",
         "name": "Portal 2",
         "publisher": "Valve",
         "count": 8,
         "year": 2010,
         "platform": "PS, XBox, PC",
         "internet": "Required",
-        "genre": "platformer",
+        "genre": "Platformer",
         "popular": false
     },
-    "2": {
+{
         "num": 2,
-        "cover": "src/assets/covers/gears_of_war.jpeg",
+        "cover": "./assets/covers/gears_of_war.jpeg",
         "name": "Gears of War",
         "publisher": "Microsoft",
         "count": 10,
         "year": 2008,
         "platform": "XBox, PC",
         "internet": "Not required",
-        "genre": "shooter",
+        "genre": "Shooter",
         "popular": true
     },
-    "3": {
+{
         "num": 3,
-        "cover": "src/assets/covers/fable_2.jpeg",
+        "cover": "./assets/covers/fable_2.jpeg",
         "name": "Fable 2",
         "publisher": "Microsoft",
         "count": 10,
         "year": 2008,
         "platform": "XBox",
         "internet": "Not required",
-        "genre": "Action/Adventure",
+        "genre": "Action",
         "popular": false
     },
-    "4": {
+{
         "num": 4,
-        "cover": "src/assets/covers/uncharted_2.jpeg",
+        "cover": "./assets/covers/uncharted_2.jpeg",
         "name": "Uncharted 2",
         "publisher": "Sony CE",
         "count": 20,
         "year": 2009,
         "platform": "PS",
         "internet": "Not required",
-        "genre": "Action/Adventure",
+        "genre": "Action",
         "popular": true
     },
-    "5": {
+{
         "num": 5,
-        "cover": "src/assets/covers/HL_2.jpeg",
+        "cover": "./assets/covers/HL_2.jpeg",
         "name": "Half-life 2",
         "publisher": "Valve",
         "count": 10,
         "year": 2004,
         "platform": "PS, XBox, PC",
         "internet": "Required",
-        "genre": "shooter",
+        "genre": "Shooter",
         "popular": true
     },
-    "6": {
+{
         "num": 6,
-        "cover": "src/assets/covers/battlefield_2042.jpeg",
+        "cover": "./assets/covers/battlefield_2042.jpeg",
         "name": "Battlefield 2042",
         "publisher": "EA",
         "count": 50,
         "year": 2021,
         "platform": "PS, XBox, PC",
         "internet": "Required",
-        "genre": "shooter",
+        "genre": "Shooter",
         "popular": false
     },
-    "7": {
+{
         "num": 7,
-        "cover": "src/assets/covers/the_last_of_us.jpeg",
+        "cover": "./assets/covers/the_last_of_us.jpeg",
         "name": "The Last of Us",
         "publisher": "Sony CE",
         "count": 8,
         "year": 2013,
         "platform": "PS",
         "internet": "Not required",
-        "genre": "Action/Adventure",
+        "genre": "Action",
         "popular": true
     },
-    "8": {
+{
         "num": 8,
-        "cover": "src/assets/covers/forzaH4.jpeg",
+        "cover": "./assets/covers/forzaH4.jpeg",
         "name": "Forza Horizon 4",
         "publisher": "Microsoft",
         "count": 15,
         "year": 2018,
         "platform": "XBox, PC",
         "internet": "Not required",
-        "genre": "racing",
+        "genre": "Racing",
         "popular": false
     },
-    "9": {
+{
         "num": 9,
-        "cover": "src/assets/covers/ori.jpeg",
+        "cover": "./assets/covers/ori.jpeg",
         "name": "Ori and the Blind Forest",
         "publisher": "Microsoft",
         "count": 20,
         "year": 2015,
         "platform": "XBox, PC",
         "internet": "Not required",
-        "genre": "Action/Adventure",
+        "genre": "Action",
         "popular": false
     },
-    "10": {
+{
         "num": 10,
-        "cover": "src/assets/covers/ME_LE.jpeg",
+        "cover": "./assets/covers/ME_LE.jpeg",
         "name": "Mass Effect Legendary Edition",
         "publisher": "EA",
         "count": 30,
         "year": 2021,
         "platform": "PS, XBox, PC",
         "internet": "Not required",
-        "genre": "Action/Adventure",
+        "genre": "Action",
         "popular": true
     },
-    "11": {
+{
         "num": 11,
-        "cover": "src/assets/covers/crysis.jpeg",
+        "cover": "./assets/covers/crysis.jpeg",
         "name": "Crysis",
         "publisher": "EA",
         "count": 13,
         "year": 2007,
         "platform": "PS, XBox, PC",
         "internet": "Not required",
-        "genre": "shooter",
+        "genre": "Shooter",
         "popular": false
     }
-}
+]

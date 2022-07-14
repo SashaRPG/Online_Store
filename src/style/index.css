@@ -214,7 +214,7 @@ body {
 .catalogue__item {
     border-radius: 10%;
     margin: 10px;
-    height: 400px;
+    min-height: 400px;
     width: 300px;
     gap: 15px;
     background-color: rgb(80, 163, 222);
