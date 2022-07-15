@@ -73,27 +73,3 @@ function gameCard({num, cover, name, publisher, count, year, platform, internet,
 }
 
 export default gameCard;
-
-
-/* <div class="catalogue__item">
-<div class="catalogue__data">
-<div class="catalogue__data-cover">
-</div>
-<h2 class="catalogue__data-title">Crysis</h2>
-<ul class="catalogue__data-details">
-
-</ul>
-</div>
-</div> *//* 
-    [{
-        class: 'count',
-        title:'Copies',
-        value: count,
-        }] 
-        ul.append(...li.map((el)=>{
-const el = document.createElement('li');
-li.className= 'catalogue__data-'+el.class;
-li.textContent = ${el.title}: ${el.value};
-return li;
-}))
-        */
