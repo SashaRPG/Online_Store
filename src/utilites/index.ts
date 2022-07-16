@@ -1,5 +1,3 @@
-
-
 export interface IFilters {
     search: string;
     sortBy: "A-Z" | "Z-A" | "Old" | "New";

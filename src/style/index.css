@@ -122,6 +122,11 @@ background: linear-gradient(180deg, rgba(255,214,0,1) 0%, rgba(226,238,136,1) 50
 
 .active {
     filter:invert(20%) saturate(561%) hue-rotate(342deg) brightness(83%) contrast(200%);
+    background-color: rgb(80, 163, 222, 0.7);
+}
+
+.active_card {
+    background-color: rgb(255,214,0); 
 }
 
 .type-ps {
