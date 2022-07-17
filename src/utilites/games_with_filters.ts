@@ -27,18 +27,31 @@ class gameWithFilters {
     }
 
     async filters(filt: IFilters){
-        const internet = filt.internet ? "Required" : "Not required";
+        const internet = String(filt.internet) === 'true' ? 'Required' : 'Not required';
+        const hits = String(filt.hits) === 'true';
         let filteredGames: IGameCard[] = await this.getGameData();
         filteredGames = filteredGames.filter((el) => { 
             return filt.platform.every((f) => el.platform.includes(f));
         }).filter((el) => {
-            return filt.publisher.every((p) => el.publisher.includes(p));
+            if (!filt.publisher.length){
+                return el;
+            }
+            return filt.publisher.some((p) => el.publisher.includes(p));
         }).filter((el) => {
-            return filt.genre.every((g) => el.genre.includes(g));
+            if (!filt.genre.length){
+                return el;
+            }
+            return filt.genre.some((g) => el.genre.includes(g));
         }).filter((el) => {
-            return internet === el.internet;
+            if (internet === 'Required') {
+                return internet === el.internet;
+            }
+            return el;
         }).filter((el) => {
-            return filt.hits === el.popular;
+            if (hits){
+                return hits === el.popular;
+            }
+            return el; 
         }).filter((el) => {
             return el.name.toLowerCase().includes(filt.search.toLowerCase());
         }).sort(sorting[filt.sortBy]);

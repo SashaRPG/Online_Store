@@ -189,7 +189,7 @@
         "platform": "XBox, PC",
         "internet": "Required",
         "genre": "Shooter",
-        "popular": false
+        "popular": true
     },
     {
         "num": 16,

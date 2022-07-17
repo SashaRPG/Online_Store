@@ -193,7 +193,7 @@ background: linear-gradient(180deg, rgba(255,214,0,1) 0%, rgba(226,238,136,1) 50
 
 .popular-input-label {
     position: relative;
-    left: 135px;
+    left: 105px;
 }
 
 .reset {
@@ -218,7 +218,7 @@ background: linear-gradient(180deg, rgba(255,214,0,1) 0%, rgba(226,238,136,1) 50
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     border: 1px solid rgb(121, 121, 121, 0.6);
 }
 
@@ -313,7 +313,7 @@ background: linear-gradient(180deg, rgba(255,214,0,1) 0%, rgba(226,238,136,1) 50
     }
 
     .popular-input-label {
-        left: 95px;
+        left: 73px;
     }
 
 }

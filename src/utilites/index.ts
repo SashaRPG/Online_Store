@@ -24,18 +24,19 @@ class workWithStorage {
     get() {
         return JSON.parse(this.storage.getItem(this.storeKey) as string);
     }
-    set(key: string, value: [string] | number | string | boolean) {
+/*     set(key: string, value: [string] | number | string | boolean) {
         
-    }
+    } */
 
     setArrayElements(key: string, value: string) {
         const filters = this.get();
-        if (filters[key].includes(value)){
+        if (key === 'internet' || key === 'hits'){
+            filters[key] = value;
+        } else if (filters[key].includes(value)){
             filters[key].splice(filters[key].indexOf(value), 1);
         } else {
             filters[key].push(value);
         }
-
         this.saveInStorage(filters);
     }
 

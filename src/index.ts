@@ -7,8 +7,7 @@ import './style/index.css';
 
 const gameCard = new gameWithFilters();
 const filters = new workWithStorage();
-const state = filters.get();
-let cart = {};
+const state: IFilters = filters.get();
 
 gameCard.filters(state);
 
@@ -28,31 +27,70 @@ selectSearch.addEventListener('input', (e) => {
 
 //adding visual distinction for active buttons
 
-function activeClass(state: IFilters, btn: Element) {
+function activeClass(btn: Element | null) {
+    if (!btn){
+        return;
+    }
     btn.classList.toggle('active');
+}
+function checkButton(state: IFilters){
+    state.platform.forEach(el => {
+        if (el === 'PS'){
+            activeClass(buttonPS)
+        } else if (el === 'XBox'){
+            activeClass(buttonXbox);
+        } else {
+            activeClass(buttonPC);
+        }
+    });
+    state.publisher.forEach(el => {
+        if (el === 'EA'){
+            activeClass(buttonEA);
+        } else if (el === 'Valve'){
+            activeClass(buttonValve);
+        } else if (el === 'Microsoft'){
+            activeClass(buttonMicrosoft);
+        } else if (el === 'Sony CE'){
+            activeClass(buttonSCE);
+        } else {
+            activeClass(buttonOthers);
+        }
+    });
+    state.genre.forEach(el => {
+        if (el === 'Shooters'){
+            activeClass(buttonShooter);
+        } else if (el === 'Racing'){
+            activeClass(buttonRacing);
+        } else if (el === 'Platformer'){
+            activeClass(buttonPlatformer);
+        } else if (el === 'Action'){
+            activeClass(buttonAction);
+        } else {
+            activeClass(buttonStrategy);
+        }
+    });
 }
 
 //buttons for gaming platforms
 
 const buttonPS = document.querySelector('.type-ps');
-//activeClass(state);
 buttonPS?.addEventListener('click', () => {
     filters.setArrayElements("platform", "PS");
-    activeClass(filters.get(), buttonPS);
+    activeClass(buttonPS);
     gameCard.filters(filters.get());
 });
 
 const buttonPC = document.querySelector('.type-pc');
 buttonPC?.addEventListener('click', () => {
     filters.setArrayElements("platform", "PC");
-    activeClass(filters.get(), buttonPC);
+    activeClass(buttonPC);
     gameCard.filters(filters.get());
 });
 
 const buttonXbox = document.querySelector('.type-xbx');
 buttonXbox?.addEventListener('click', () => {
     filters.setArrayElements("platform", "XBox");
-    activeClass(filters.get(), buttonXbox);
+    activeClass(buttonXbox);
     gameCard.filters(filters.get());
 });
 
@@ -61,35 +99,35 @@ buttonXbox?.addEventListener('click', () => {
 const buttonEA = document.querySelector('.type-ea');
 buttonEA?.addEventListener('click', () => {
     filters.setArrayElements("publisher", "EA");
-    activeClass(filters.get(), buttonEA);
+    activeClass(buttonEA);
     gameCard.filters(filters.get());
 });
 
 const buttonValve = document.querySelector('.type-valve');
 buttonValve?.addEventListener('click', () => {
     filters.setArrayElements("publisher", "Valve");
-    activeClass(filters.get(), buttonValve);
+    activeClass(buttonValve);
     gameCard.filters(filters.get());
 });
 
 const buttonMicrosoft = document.querySelector('.type-microsoft');
 buttonMicrosoft?.addEventListener('click', () => {
     filters.setArrayElements("publisher", "Microsoft");
-    activeClass(filters.get(), buttonMicrosoft);
+    activeClass(buttonMicrosoft);
     gameCard.filters(filters.get());
 });
 
 const buttonSCE = document.querySelector('.type-sce');
 buttonSCE?.addEventListener('click', () => {
     filters.setArrayElements("publisher", "Sony CE");
-    activeClass(filters.get(), buttonSCE);
+    activeClass(buttonSCE);
     gameCard.filters(filters.get());
 });
 
 const buttonOthers = document.querySelector('.type-others');
 buttonOthers?.addEventListener('click', () => {
     filters.setArrayElements("publisher", "Other");
-    activeClass(filters.get(), buttonOthers);
+    activeClass(buttonOthers);
     gameCard.filters(filters.get());
 });
 
@@ -98,50 +136,66 @@ buttonOthers?.addEventListener('click', () => {
 const buttonShooter = document.querySelector('.type-shooter');
 buttonShooter?.addEventListener('click', () => {
     filters.setArrayElements("genre", "Shooter");
-    activeClass(filters.get(), buttonShooter);
+    activeClass(buttonShooter);
     gameCard.filters(filters.get());
 });
 
 const buttonRacing = document.querySelector('.type-racing');
 buttonRacing?.addEventListener('click', () => {
     filters.setArrayElements("genre", "Racing");
-    activeClass(filters.get(), buttonRacing);
+    activeClass(buttonRacing);
     gameCard.filters(filters.get());
 });
 
 const buttonPlatformer = document.querySelector('.type-platformer');
 buttonPlatformer?.addEventListener('click', () => {
     filters.setArrayElements("genre", "Platformer");
-    activeClass(filters.get(), buttonPlatformer);
+    activeClass(buttonPlatformer);
     gameCard.filters(filters.get());
 });
 
 const buttonStrategy = document.querySelector('.type-strategy');
 buttonStrategy?.addEventListener('click', () => {
     filters.setArrayElements("genre", "Strategy");
-    activeClass(filters.get(), buttonStrategy);
+    activeClass(buttonStrategy);
     gameCard.filters(filters.get());
 });
 
 const buttonAction = document.querySelector('.type-action');
 buttonAction?.addEventListener('click', () => {
     filters.setArrayElements("genre", "Action");
-    activeClass(filters.get(), buttonAction);
+    activeClass(buttonAction);
     gameCard.filters(filters.get());
 });
 
 //inputs
+const [internet, hits] = document.querySelectorAll('input[type="checkbox"]');
+(internet as HTMLInputElement).checked = String(state.internet) === 'true';
+(hits as HTMLInputElement).checked = String(state.hits) === 'true';
+internet.addEventListener('change', () => {
+    filters.setArrayElements("internet", String((internet  as HTMLInputElement).checked));
+    gameCard.filters(filters.get());
+});
 
+hits.addEventListener('change', () => {
+    filters.setArrayElements("hits", String((hits  as HTMLInputElement).checked));
+    gameCard.filters(filters.get());
+})
 
 //reset button
 
 const buttonReset = document.querySelector('.reset');
 buttonReset?.addEventListener('click', () => {
     filters.resetFilters();
-    if (localStorage.getItem('button-class') !== null){
-        localStorage.removeItem('button-class');
-    }
+    const allActiveButtons = document.querySelectorAll('.active');
+    allActiveButtons.forEach((el) => {
+        el.classList.remove('active');
+    });
+    (internet as HTMLInputElement).checked = false;
+    (hits as HTMLInputElement).checked = false;
     gameCard.filters(filters.get());
 });
 
 
+
+checkButton(state);
