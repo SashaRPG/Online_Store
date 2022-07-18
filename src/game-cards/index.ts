@@ -1,11 +1,7 @@
 import IGameCard from './game-card.interface';
 
-function gameCard({num, cover, name, publisher, count, year, platform, internet, genre, popular}: IGameCard) {
-    const dataArr = [{
-        class: 'count',
-        title:'Copies',
-        value: count,
-    },
+function gameCard({num, cover, name, publisher, price, year, platform, internet, genre, popular}: IGameCard) {
+    const dataArr = [
     {
         class: 'platform',
         title:'Platforms',
@@ -35,7 +31,12 @@ function gameCard({num, cover, name, publisher, count, year, platform, internet,
         class: 'year',
         title:'Year',
         value: year,
-    }
+    },
+    {
+        class: 'price',
+        title:'Price',
+        value: price,
+    },
 ];
 
     const catalogue__item = document.createElement('div');
@@ -61,13 +62,21 @@ function gameCard({num, cover, name, publisher, count, year, platform, internet,
     details.append(...dataArr.map((el)=>{
         const li = document.createElement('li');
         li.className= 'catalogue__data-'+el.class;
-        li.textContent = `${el.title}: ${el.value}`;
+        if (li.className === 'catalogue__data-price'){
+            li.textContent = `${el.title}: $${el.value}`
+        }else {
+            li.textContent = `${el.title}: ${el.value}`;
+        }
         return li;
     }));
+
+    const buyButton = document.createElement('button');
+    buyButton.className = 'button buy';
 
     catalogue__data_cover.append(cover_img);
     catalogue__data.append(catalogue__data_cover, title, details);
     catalogue__item.append(catalogue__data);
+    catalogue__item.append(buyButton)
 
     return catalogue__item;
 }

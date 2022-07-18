@@ -5,7 +5,7 @@ interface IGameCard {
     cover: string;
     name: string;
     publisher: string;
-    count: number;
+    price: number;
     year: number;
     platform: string;
     internet: TInternet;
