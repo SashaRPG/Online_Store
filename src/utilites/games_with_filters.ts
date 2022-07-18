@@ -22,11 +22,11 @@ class gameWithFilters {
         this.container.append(...elArr);
     }
 
-    async getGameData(){
+    async getGameData() {
         return await fetch('./assets/data.json').then((res) => res.json()); 
     }
 
-    async filters(filt: IFilters){
+    async filters(filt: IFilters) {
         const internet = String(filt.internet) === 'true' ? 'Required' : 'Not required';
         const hits = String(filt.hits) === 'true';
         let filteredGames: IGameCard[] = await this.getGameData();
@@ -58,8 +58,19 @@ class gameWithFilters {
         this.showCards(filteredGames);
     }
 
-    showCards(cards: IGameCard[]){
+    showCards(cards: IGameCard[]) {
+        if (!cards.length){
+            this.emptySearch();
+            return;
+        }
         this.addInContainer(cards.map(el => gameCard(el)));
+    }
+
+    emptySearch() {
+        const paragraph = document.createElement('p');
+        paragraph.className = 'wrong__search';
+        paragraph.textContent = 'Your search is invalid!';
+        this.addInContainer([paragraph]);
     }
 }
 

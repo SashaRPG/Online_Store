@@ -1,5 +1,5 @@
 import IGameCard from './game-card.interface';
-
+import { showCart, addToCart, checkCart } from '../utilites/cart';
 function gameCard({num, cover, name, publisher, price, year, platform, internet, genre, popular}: IGameCard) {
     const dataArr = [
     {
@@ -72,11 +72,26 @@ function gameCard({num, cover, name, publisher, price, year, platform, internet,
 
     const buyButton = document.createElement('button');
     buyButton.className = 'button buy';
+    buyButton.addEventListener('click', () => {
+        const cartLength = addToCart(num);
+        console.log(cartLength);
+        if (buyButton.classList.contains('active__buy')){
+            buyButton.classList.remove('active__buy');
+        } else {
+            if (cartLength <= 20) {
+                buyButton.classList.add('active__buy');
+            }
+        }
+        showCart();
+    });
+    if (checkCart(num)) {
+        buyButton.classList.add('active__buy');
+    }
 
     catalogue__data_cover.append(cover_img);
     catalogue__data.append(catalogue__data_cover, title, details);
     catalogue__item.append(catalogue__data);
-    catalogue__item.append(buyButton)
+    catalogue__item.append(buyButton);
 
     return catalogue__item;
 }

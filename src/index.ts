@@ -3,6 +3,7 @@
 import workWithStorage from './utilites';
 import gameWithFilters from './utilites/games_with_filters';
 import { IFilters } from './utilites';
+import { showCart, clearCart } from './utilites/cart';
 import './style/index.css';
 
 const gameCard = new gameWithFilters();
@@ -182,8 +183,8 @@ hits.addEventListener('change', () => {
     gameCard.filters(filters.get());
 })
 
-//reset button
-
+//reset filters button
+const sortSelection = document.querySelector('.filters__sort');
 const buttonReset = document.querySelector('.reset');
 buttonReset?.addEventListener('click', () => {
     filters.resetFilters();
@@ -191,11 +192,20 @@ buttonReset?.addEventListener('click', () => {
     allActiveButtons.forEach((el) => {
         el.classList.remove('active');
     });
+    (sortSelection as HTMLInputElement).value = "A-Z";
     (internet as HTMLInputElement).checked = false;
     (hits as HTMLInputElement).checked = false;
     gameCard.filters(filters.get());
 });
 
-
-
+//reset cart button
+const buttonResetCart = document.querySelector('.reset_cart');
+buttonResetCart?.addEventListener('click', () => {
+    const allActiveBuyButtons = document.querySelectorAll('.active__buy');
+    allActiveBuyButtons.forEach( el => {
+        el.classList.remove('active__buy');
+    })
+    clearCart();
+});
+showCart();
 checkButton(state);
