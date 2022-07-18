@@ -220,7 +220,16 @@ body {
     width: 50px;
 }
 
-.reset:hover {
+.reset_cart {
+    background-image: url('../assets/clear-cart.png');
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+
+.reset:hover, .reset_cart:hover {
     opacity: 0.7;
 }
 
@@ -274,7 +283,7 @@ body {
 
 .catalogue__data-details li {
     display: block;
-    padding: 0.1rem;
+    padding: 0.2rem;
 }
 
 .footer {

@@ -1,107 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Game Store</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="app">
-        <div class="container">
-          <header class="header">
-            <h1 class="title">Welcome to our store!</h1>
-            <div class="cart">
-              <span class="counter">0</span>
-            </div>
-          </header>
-            <div class="filters">
-              <div class="search">
-                <h2 class="filters__title">Search</h2>
-                <input type="search" class="filters__search" placeholder="Search Title" autocomplete="off">
-              </div>
-              <div>
-                <h3 class="filters__title">Sort by:</h3>
-                <select class="filters__sort">
-                  <option class="filters__sort-options" value="A-Z">By Name from "A to Z"</option>
-                  <option class="filters__sort-options" value="Z-A">By Name from "Z to A"</option>
-                  <option class="filters__sort-options" value="Old">Oldest first</option>
-                  <option class="filters__sort-options" value="New">Newest first</option>
-                </select>
-              </div>
-              <h3 class="filters__title">Filter by characteristics</h3>
-              <div class="filters__all">
-                <div class="filters__platform">
-                  Your gaming platform:
-                  <ul class="list">
-                    <button class="button type-ps"></button>
-                    <button class="button type-xbx"></button>
-                    <button class="button type-pc"></button>
-                  </ul>
-                </div>
-                <div class="filters__publisher">
-                  Published by:
-                  <ul class="list">
-                    <button class="button type-ea">EA</button>
-                    <button class="button type-valve">Valve</button>
-                    <button class="button type-microsoft">MicroSoft</button>
-                    <button class="button type-sce">Sony CE</button>
-                    <button class="button type-others">Others</button>
-                  </ul>
-                </div>
-                <div class="filters__genres">
-                  Game Genres:
-                  <ul class="list">
-                    <button class="button type-shooter">Shooters</button>
-                    <button class="button type-racing">Racing</button>
-                    <button class="button type-platformer">Platformer</button>
-                    <button class="button type-action">Action</button>
-                    <button class="button type-strategy">Strategy</button>
-                  </ul>
-                </div>
-                <div class="filters_popular">
-                  <p>Internet required:</p>
-                  <div class="list">
-                    <input type="checkbox" class="internet-input" id="int_check">
-                    <label for="int_check" class="internet-input-label"></label>
-                  </div>
-                </div>
-                <div class="filters_popular">
-                  <p>Hits:</p>
-                  <div class="list">
-                    <input type="checkbox" class="popular-input" id="pplr_check">
-                    <label for="pplr_check" class="popular-input-label"></label>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <!-- <h3 class="filters__title">Filter by Range</h3> -->
-                <!-- ADD RANGE FILTER -->
-              </div>
-              <h3 class="filters__title">Reset filters and cart:</h3>
-              <button class="button reset"></button>
-            </div>
-            <div class="games">
-            </div>
-          <footer class="footer">
-            <p class="logo">
-              <a href="https://rs.school/js/" target="_blank">
-                <img class="footer__img" src="./assets/rs_school.png" alt="rs_school logo">
-              </a>
-            </p>
-            <p class="year">2022</p>
-            <p class="author">
-              <a href="https://github.com/sashaRPG" target="_blank">
-                <img class="footer__img" src="./assets/GitHub-Mark-120px-plus.png" alt="github logo">
-              </a>
-            </p>
-          </footer>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Game Store</title>
+  <link rel="apple-touch-icon" type="image/x-icon" href="./assets/gamepad.png" sizes="64x64">
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/gamepad.png" sizes="64x64">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="app">
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Welcome to our store!</h1>
+        <div class="cart">
+          <span class="counter">0</span>
         </div>
+      </header>
+      <div class="filters">
+        <div class="search">
+          <h2 class="filters__title">Search</h2>
+          <input type="search" class="filters__search" placeholder="Search Title" autocomplete="off">
+        </div>
+        <div>
+          <h3 class="filters__title">Sort by:</h3>
+          <select class="filters__sort">
+            <option class="filters__sort-options" value="A-Z">By Name from "A to Z"</option>
+            <option class="filters__sort-options" value="Z-A">By Name from "Z to A"</option>
+            <option class="filters__sort-options" value="Old">Oldest first</option>
+            <option class="filters__sort-options" value="New">Newest first</option>
+          </select>
+        </div>
+        <h3 class="filters__title">Filter by characteristics</h3>
+        <div class="filters__all">
+          <div class="filters__platform">
+            Your gaming platform:
+            <ul class="list">
+              <button class="button type-ps"></button>
+              <button class="button type-xbx"></button>
+              <button class="button type-pc"></button>
+            </ul>
+          </div>
+          <div class="filters__publisher">
+            Published by:
+            <ul class="list">
+              <button class="button type-ea">EA</button>
+              <button class="button type-valve">Valve</button>
+              <button class="button type-microsoft">MicroSoft</button>
+              <button class="button type-sce">Sony CE</button>
+              <button class="button type-others">Others</button>
+            </ul>
+          </div>
+          <div class="filters__genres">
+            Game Genres:
+            <ul class="list">
+              <button class="button type-shooter">Shooters</button>
+              <button class="button type-racing">Racing</button>
+              <button class="button type-platformer">Platformer</button>
+              <button class="button type-action">Action</button>
+              <button class="button type-strategy">Strategy</button>
+            </ul>
+          </div>
+          <div class="filters_popular">
+            <p>Internet required:</p>
+            <div class="list">
+              <input type="checkbox" class="internet-input" id="int_check">
+              <label for="int_check" class="internet-input-label"></label>
+            </div>
+          </div>
+          <div class="filters_popular">
+            <p>Hits:</p>
+            <div class="list">
+              <input type="checkbox" class="popular-input" id="pplr_check">
+              <label for="pplr_check" class="popular-input-label"></label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- <h3 class="filters__title">Filter by Range</h3> -->
+          <!-- ADD RANGE FILTER -->
+        </div>
+        <h3 class="filters__title">Reset filters</h3>
+        <button class="button reset"></button>
+        <h3 class="filters__title">Reset sorting and cart</h3>
+        <button class="button reset_cart"></button>
+      </div>
+      <div class="games">
+      </div>
+      <footer class="footer">
+        <p class="logo">
+          <a href="https://rs.school/js/" target="_blank">
+            <img class="footer__img" src="./assets/rs_school.png" alt="rs_school logo">
+          </a>
+        </p>
+        <p class="year">2022</p>
+        <p class="author">
+          <a href="https://github.com/sashaRPG" target="_blank">
+            <img class="footer__img" src="./assets/GitHub-Mark-120px-plus.png" alt="github logo">
+          </a>
+        </p>
+      </footer>
     </div>
-    
-  </body>
+  </div>
+
+</body>
+
 </html>

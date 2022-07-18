@@ -63,7 +63,7 @@ function gameCard({num, cover, name, publisher, price, year, platform, internet,
         const li = document.createElement('li');
         li.className= 'catalogue__data-'+el.class;
         if (li.className === 'catalogue__data-price'){
-            li.textContent = `${el.title}: $${el.value}`
+            li.textContent = `${el.title}: £${el.value}`
         }else {
             li.textContent = `${el.title}: ${el.value}`;
         }
