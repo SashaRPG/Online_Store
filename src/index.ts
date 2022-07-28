@@ -2,15 +2,23 @@
 //import IGameCard from './game-cards/game-card.interface';
 import workWithStorage from './utilites';
 import gameWithFilters from './utilites/games_with_filters';
+import { sliderOne, sliderTwo, fillColor } from './utilites/slider';
 import { IFilters } from './utilites';
 import { showCart, clearCart } from './utilites/cart';
 import './style/index.css';
 
+
 const gameCard = new gameWithFilters();
 const filters = new workWithStorage();
 const state: IFilters = filters.get();
-
+fillColor();
 gameCard.filters(state);
+
+const slider1 = document.querySelector('#slider-1') as HTMLInputElement;
+slider1.addEventListener('input', sliderOne);
+
+const slider2 = document.querySelector('#slider-2') as HTMLInputElement;
+slider2.addEventListener('input', sliderTwo);
 
 const searchField = document.querySelector('.filters__search') as HTMLInputElement;
 searchField.value = state.search;

@@ -81,9 +81,20 @@
             </div>
           </div>
         </div>
-        <div>
-          <!-- <h3 class="filters__title">Filter by Range</h3> -->
-          <!-- ADD RANGE FILTER -->
+        <h3 class="filters__title">Filter by Range</h3>
+        <div class="filters__range">
+          <div class="filters__range-values">
+            <span id="range1">
+              0
+            </span>
+            <span>–</span>
+            <span id="range2">
+              100
+            </span>
+          </div>
+          <div class="slider"></div>
+          <input type="range" min="0" max="100" value="0" id="slider-1">
+          <input type="range" min="0" max="100" value="100" id="slider-2">
         </div>
         <h3 class="filters__title">Reset filters and sorting</h3>
         <button class="button reset"></button>
